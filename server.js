@@ -479,7 +479,7 @@ app.post('/logout', function(req, res) {
 else{
 	res.json({"message":"You are not currently logged in"});	
 }
-});
+}); //lavy
 
 //launching 
 app.listen(port);
