@@ -1,0 +1,134 @@
+{
+  "aggregate": {
+    "timestamp": "2017-07-01T16:04:28.562Z",
+    "scenariosCreated": 1,
+    "scenariosCompleted": 1,
+    "requestsCompleted": 9,
+    "latency": {
+      "min": 25.6,
+      "max": 138.9,
+      "median": 28,
+      "p95": null,
+      "p99": null
+    },
+    "rps": {
+      "count": 9,
+      "mean": 8.65
+    },
+    "scenarioDuration": {
+      "min": 654.4,
+      "max": 654.4,
+      "median": 654.4,
+      "p95": null,
+      "p99": null
+    },
+    "scenarioCounts": {
+      "login not registered": 1
+    },
+    "errors": {},
+    "codes": {
+      "200": 9
+    },
+    "matches": 9,
+    "customStats": {},
+    "phases": [
+      {
+        "duration": 1,
+        "arrivalCount": 1
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2017-07-01T16:04:28.518Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 9,
+      "latency": {
+        "min": 25.6,
+        "max": 138.9,
+        "median": 28,
+        "p95": null,
+        "p99": null
+      },
+      "rps": {
+        "count": 9,
+        "mean": 9
+      },
+      "scenarioDuration": {
+        "min": 654.4,
+        "max": 654.4,
+        "median": 654.4,
+        "p95": null,
+        "p99": null
+      },
+      "scenarioCounts": {
+        "login not registered": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 9
+      },
+      "matches": 9,
+      "latencies": [
+        [
+          1498925067673,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          138858492,
+          200
+        ],
+        [
+          1498925067765,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          44020983,
+          200
+        ],
+        [
+          1498925067818,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          27403574,
+          200
+        ],
+        [
+          1498925067870,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          25559530,
+          200
+        ],
+        [
+          1498925067918,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          27506210,
+          200
+        ],
+        [
+          1498925067970,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          27963678,
+          200
+        ],
+        [
+          1498925068018,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          33475770,
+          200
+        ],
+        [
+          1498925068082,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          32504629,
+          200
+        ],
+        [
+          1498925068119,
+          "c1a61adc-dccd-40a0-95b3-1d988af2f802",
+          26001847,
+          200
+        ]
+      ],
+      "customStats": {},
+      "concurrency": 0,
+      "pendingRequests": 0
+    }
+  ]
+}
