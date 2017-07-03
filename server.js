@@ -9,9 +9,10 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-//var port     = process.env.PORT || 8080;
-var port     = process.env.PORT || 7000;
+var port     = process.env.PORT || 8080;
+//var port     = process.env.PORT || 7000;
 var mysql = require('mysql');
+
 
 
 //session mgmt
@@ -19,10 +20,17 @@ var session      = require('express-session');
 var cookieParser = require('cookie-parser');
 app.use(cookieParser()); // read cookies (needed for auth)
 
+//redis variable
+var redis = require("redis");
+var redisStore = require('connect-redis')(session);
+var client = redis.createClient(6379, 'redislavy.gtjqw1.0001.use1.cache.amazonaws.com', {no_ready_check: true});
+
 app.use(session({
   secret: 'squishysquashygoo',
  resave: true,
   rolling: true,
+  //redis store
+   store: new redisStore({ host: 'redislavy.gtjqw1.0001.use1.cache.amazonaws.com', port: 6379, client: client,ttl :  260}),
   saveUninitialized: true,
    cookie: { 
   expires:15*60*1000
@@ -34,21 +42,21 @@ app.use(bodyParser()); // get information from html forms
 
 //MYSQL DB CONFIG
 
-var connection = mysql.createConnection({
+/*var connection = mysql.createConnection({
   host     : 'lavymysql.cnywgp1kyedu.us-east-1.rds.amazonaws.com',
   port	   : '3306',
   user     : 'root',
   password : 'lavanyar',
   database : 'Project1_DB'
-});
+});*/
 
-/*var connection = mysql.createConnection({
+var connection = mysql.createConnection({
   host     : 'localhost',
   port	   : '3306',
   user     : 'root',
   password : 'lavanya',
   database : 'edis'
-});*/
+});
 
 
 connection.connect(function(err){
