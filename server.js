@@ -23,14 +23,15 @@ app.use(cookieParser()); // read cookies (needed for auth)
 //redis variable
 var redis = require("redis");
 var redisStore = require('connect-redis')(session);
-var client = redis.createClient(6379, 'redislavy.gtjqw1.0001.use1.cache.amazonaws.com', {no_ready_check: true});
+var client = redis.createClient(6379, 'redis-v2.gtjqw1.0001.use1.cache.amazonaws.com', {no_ready_check: true});
+
 
 app.use(session({
   secret: 'squishysquashygoo',
  resave: true,
   rolling: true,
   //redis store
-   store: new redisStore({ host: 'redislavy.gtjqw1.0001.use1.cache.amazonaws.com', port: 6379, client: client,ttl :  260}),
+   store: new redisStore({ host: 'redis-v2.gtjqw1.0001.use1.cache.amazonaws.com', port: 6379, client: client,ttl :  260}),
   saveUninitialized: true,
    cookie: { 
   expires:15*60*1000
